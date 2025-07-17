@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"Workspace/src/controller"
+	"https://github.com/lisalalmeida/crud/tree/main/src/controller"
 	"github.com/gin-gonic/gin"
 )
 
