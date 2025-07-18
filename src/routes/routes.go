@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"https://github.com/lisalalmeida/crud/tree/main/src/controller"
+	"api/src/controller"
 	"github.com/gin-gonic/gin"
 )
 

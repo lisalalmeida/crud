@@ -1,11 +1,13 @@
 package main
 
 import (
-	"net/http"	
+	"log"
+	"net/http"
+	"api/src/routes"
 	"github.com/gin-gonic/gin"
 )
 
-func main(){
+func main(){ 	
 	r := gin.Default()
 
 	r.LoadHTMLFiles("site/index.html")
@@ -13,9 +15,9 @@ func main(){
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
-
-	r.InitRoutes(&r.RouterGroup)
-
+	
+	routes.InitRoutes(&r.RouterGroup)
+	
 	if err := r.Run(":8080"); err != nil {
 		log.Fatal(err)
 	}
